@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mauriceLC92/My-NodeJs-Blockchain/issues"
   },
-  "homepage": "https://github.com/mauriceLC92/My-NodeJs-Blockchain#readme"
+  "homepage": "https://github.com/mauriceLC92/My-NodeJs-Blockchain#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
 }
