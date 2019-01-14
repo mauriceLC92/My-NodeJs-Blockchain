@@ -1,0 +1,12 @@
+// Bare bones block data model - Contains no information required for consensus
+
+{
+	"hash": "",
+	"height": 0,
+	"body": [
+
+	],
+	"time": 1529001822,
+	"previousblockhash": ""
+  }
+ 
