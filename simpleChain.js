@@ -1,3 +1,4 @@
+const SHA256 =  require('crypto-js').SHA256;
 
 // Class with a constructor for block data model
 class Block {
@@ -29,13 +30,16 @@ class Blockchain {
     }
 }
 
-const block1 = new Block('I am block 1');
-const block2 = new Block('I am block 2');
 
-const mauriceChain = new Blockchain();
 
-mauriceChain.addBlock(block1);
-console.log('mauriceChain', mauriceChain );
-console.log('---------------------')
-mauriceChain.addBlock(block2);
-console.log('mauriceChain', mauriceChain );
+
+// const block1 = new Block('I am block 1');
+// const block2 = new Block('I am block 2');
+
+// const mauriceChain = new Blockchain();
+
+// mauriceChain.addBlock(block1);
+// console.log('mauriceChain', mauriceChain );
+// console.log('---------------------')
+// mauriceChain.addBlock(block2);
+// console.log('mauriceChain', mauriceChain );

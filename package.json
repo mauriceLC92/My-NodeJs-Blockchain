@@ -1,5 +1,5 @@
 {
-  "name": "My-NodeJs-Blockchain",
+  "name": "my-nodejs-blockchain",
   "version": "1.0.0",
   "description": "A Private Blockchain created with JavaScript, utilizing NodeJs",
   "main": "index.js",
