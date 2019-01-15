@@ -1,24 +1,15 @@
 const SHA256 = require('crypto-js').SHA256;
-
-// Class with a constructor for block data model
-class Block {
-    constructor(data) {
-        this.hash = '';
-        this.height = 0;
-        this.body = data;
-        this.timeStamp = '';
-        this.previousblockhash = '0x';
-    }
-}
+const Block = require('./Block');
 
 // Class with a constructor for a new Blockchain
 // has support for the following methods:
-// - createGenesisBlock()
-// - getLatestBlock() 
-// - caddBlock()
-// - getBlock()
-// - validateBlock()
-// - validateChain()
+// - createGenesisBlock() -  Creates the genesis block
+// - getLatestBlock() - gets the latest block and returns it as a JSON string object
+// - addBlock() - Adds a new block into the chain, to do that you need to assign the corresponding height, hash, previousBlockHash and timeStamp to your block.
+// - getBlockHeight() - Counts all the Blocks in your chain and give you as a result the last height in your chain
+// - getBlock() - Gets a block and returns it as a JSON string object
+// - validateBlock(blockHeight) - Validates block data integrity
+// - validateChain() - Validates blockchain is still valid at any moment
 
 class Blockchain {
     constructor() {

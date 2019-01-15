@@ -1,13 +1,9 @@
-/* ===== Persist data with LevelDB ==================
-|  Learn more: level: https://github.com/Level/level |
-/===================================================*/
+
 // Importing the module 'level'
 const level = require('level');
 // Declaring the folder path that store the data
 const chainDB = './chaindata';
-// Declaring a class
 class LevelSandbox {
-	// Declaring the class constructor
     constructor() {
     	this.db = level(chainDB);
     }
@@ -47,7 +43,6 @@ class LevelSandbox {
   
     getBlocksCount() {
         let self = this;
-		// Add your code here
         return new Promise(function(resolve,reject) {
 			let count = 0;
 			self.db.createReadStream()
@@ -66,5 +61,4 @@ class LevelSandbox {
       }
 }
 
-// Export the class
 module.exports.LevelSandbox = LevelSandbox;
