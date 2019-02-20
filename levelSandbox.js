@@ -21,6 +21,7 @@ class LevelSandbox {
                         reject(err);
                     }
                 }else {
+					value = JSON.parse(value);
                     resolve(value);
                 }
             });
@@ -36,7 +37,7 @@ class LevelSandbox {
                     console.log('Block ' + key + ' submission failed', err);
                     reject(err);
                 }
-                resolve(value);
+                return resolve(value);
             });
         });
     }
@@ -44,11 +45,11 @@ class LevelSandbox {
     getBlocksCount() {
         let self = this;
         return new Promise(function(resolve,reject) {
-			let count = 0;
+			let count = -1;
 			self.db.createReadStream()
 			.on('data', function(data) {
 				if(data.key) {
-					count += 1;
+					count ++;
 				}
 			})
 			.on('error', function(err) {

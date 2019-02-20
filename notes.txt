@@ -1,12 +1,9 @@
-// Bare bones block data model - Contains no information required for consensus
-
+// Block data model
 {
-	"hash": "",
-	"height": 0,
-	"body": [
+    "hash" : "",
+    "height" : 0,
+    "body": [],
+    "time": 0,
+    previousblockhash: ""
 
-	],
-	"time": 0,
-	"previousblockhash": ""
 }
- 
